@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义angularJS指令</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <span runoob-directive></span>
+    </div>
+</body>
+<script type="text/javascript">
+var app = angular.module("myApp", []);
+app.directive("runoobDirective", function() {
+    console.log('str');
+    return {
+        template: "<h1>sdad</h1>"
+    };
+});
+</script>
+
+</html>

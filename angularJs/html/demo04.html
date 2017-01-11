@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义angularJS指令</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myapp1" ng-init="names=['str1','str2','str3','str4']">
+        <ul>
+            <li ng-repeat="x in names">{{x}}</li>
+        </ul>
+       <!--  <ul>
+           <li ng-repeat="">copy</li>
+       </ul>  -->
+    </div>
+</body>
+<script type="text/javascript">
+var myapp1 = angular.module('myapp1', []);
+</script>
+
+</html>

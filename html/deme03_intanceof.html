@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funtion prototype</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<script type="text/javascript" src="../js/jquery/jquery-3.1.0.slim.min.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var num = 98; 
+	console.log(num instanceof Number);
+	console.log(Object.prototype);
+	var array=[14,12,13];
+	console.log(array);
+	console.log(array.toString());
+	console.log(array.valueOf());
+	console.log(array.toLocaleString());
+	console.log(array.join(''));
+	var count = array.push(9);
+	console.log(array[3]);
+	console.log(array.length);
+	console.log(count);
+	console.log(array);
+	count=array.pop();
+	array.pop();
+	array.pop();
+	console.log(count);
+	console.log(array);
+	console.log(Object.prototype.toLocaleString());
+</script>
+</html>

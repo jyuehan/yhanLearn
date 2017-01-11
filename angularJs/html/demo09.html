@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>服务</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <section ng-controller="myCon">
+            <span>{{255| myFormat}}</span>
+            <span ng-bind="font"></span>
+        </section>
+    </div>
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[]);
+    var ss=app.service('myServer',function(){
+        this.myfunction=function(x){
+            return x.toString(16);
+        }
+    });
+    app.filter('myFormat',['myServer',function(myS){
+        return function(x){
+            return myS.myfunction(x);
+        }
+    }]);
+    app.controller('myCon',function($scope,myServer){
+        $scope.font=myServer.myfunction(254);
+    });
+</script>
+</html>

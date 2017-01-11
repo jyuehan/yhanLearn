@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funtion prototype</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<script type="text/javascript" src="../js/jquery/jquery-3.1.0.slim.min.js"></script>
+</head>
+<style type="text/css">
+	.box{
+		padding: 20px;
+	}
+	.nav{
+		margin: 0 auto;
+		width: 80%;
+	}
+	.nav li{
+		border:1px solid #333;
+		border-radius:5px;
+		padding: 5px;
+		background-color:#aaa;
+		margin-left:10px;
+	}
+	.active{
+		background-color:red !important;
+		 
+	}
+	.active a{color:#fff;}
+</style>
+<body>
+	<div class="box clfBug">
+		<ul class="nav">
+			<li class="lf"><a href="javascript:;">demo01</a></li>
+			<li class="lf"><a href="javascript:;">demo02</a></li>
+			<li class="lf"><a href="javascript:;">demo03</a></li>
+			<li class="lf"><a href="javascript:;">demo04</a></li>
+			<li class="lf"><a href="javascript:;">demo05</a></li>
+			<li class="lf"><a href="javascript:;">demo06</a></li>
+			<li class="lf"><a href="javascript:;">demo07</a></li>
+			<li class="lf"><a href="javascript:;">demo08</a></li>
+			<li class="lf"><a href="javascript:;">demo09</a></li>
+		</ul>
+		<div id="sc">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<div>
+		<input type="text" name="" class="name">
+		<h2><span class="bName"></span></h2>
+	</div>
+</body>
+<script type="text/javascript">
+	console.log(Object);
+	function Posion(){
+		this.grade=3;
+	}
+	Posion.prototype={
+		name:'sb',
+		age:18
+	}
+	posion1=new Posion();
+	console.log(Posion.prototype);
+	var prototype=Posion.prototype;
+	console.log(Posion);
+	console.log(prototype.constructor);
+	console.log(Object);
+	console.log(Object.getPrototypeOf(posion1));
+
+</script>
+</html>

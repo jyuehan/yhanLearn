@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义angularJS指令</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+        /* input.ng-valid{
+            background-color: blue; 
+        }
+        input.ng-invalid{
+            background-color: red; 
+        } 
+        input.ng-empty{
+            background-color: yellow; 
+        }
+        input.ng-not-empty{
+            background-color: gray; 
+        }
+        input.ng-touched{
+            background-color: green; 
+        }
+        
+        input.ng-untouched{
+            background-color: hotpink; 
+        }*/ 
+        input.ng-deity{
+            background-color: purple; 
+        }/*
+        input.ng-pending{
+            background-color: orange; 
+        }
+        input.ng-prisine{
+            background-color: gold; 
+        } */
+    </style>
+</head>
+
+<body>
+    <div ng-app="">
+        <form name="myFrom">
+            Email
+            <input type="email" name="myAddress" ng-model="text">
+            <span ng-show="myFrom.myAddress.$error.email">不合法地址</span>  <!-- 提示信息会在 ng-show 属性返回 true 的情况下显示。 -->
+            <h1>状态值</h1>
+            <p>valid:{{myFrom.myAddress.$valid}}(如果输入的值是合法的则为 true)</p>
+            <p>dirty:{{myFrom.myAddress.$dirty}}(如果值改变则为 true)</p>
+            <p>Touched:{{myFrom.myAddress.$touched}}(如果通过触屏点击则为 true)</p>
+        </form>
+    </div>
+</body>
+</html>

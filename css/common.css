@@ -1,0 +1,77 @@
+﻿/**
+ * @name   		通用css
+ * @return 		null
+ * @depend   	null
+ * @Date     	2016年9月02日17:38
+ * @Site     	null
+ * @author   	yhan
+ */
+
+
+	/*
+		消除浏览器自带bug
+	*/
+	html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i,dl, dt, dd, ol, ul, li,fieldset, form,label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas,details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output,  section, summary,time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	ul li,li{
+		list-style-type: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:focus { -moz-outline-style: none; }
+	a:hover{
+		text-decoration:none;
+	}
+	a img{
+		border:none;
+	}
+	
+	/*
+		字体颜色
+	*/
+	*{ font-family:"Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3",sans-serif;}
+
+	/*
+		浮动效果
+	*/
+	.lf{
+		float: left;
+	}
+	.rf{
+		float: right;
+	}
+	.cleanf{clear: both;}
+	.clrBug{
+		overflow: hidden;
+		zoom: 1;
+	}
+	.clr {
+		zoom: 1;
+	}	
+	.clr:after {
+		visibility: hidden;
+		display: block;
+		content: " ";
+		clear: both;
+		height: 0;
+		line-height: 0;
+	}
+
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd)	{
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}

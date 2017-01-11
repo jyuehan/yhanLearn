@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myapp">
+        <div ng-controller="mycontroll">
+            名
+            <input type="" name="" ng-model="firstName">
+            <br>
+            <br> 姓
+            <input type="" name="" ng-model="lastName">
+            <br> 姓名{{lastName+firstName}}
+            <br> 名姓{{firstName+lastName}}
+        </div>
+        <div ng-controller="controller2">
+            <input type="" name="" ng-model="secondName">
+            <span ng-bind="secondName"></span>
+            
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var myapp = angular.module('myapp', []);
+console.log(myapp)
+myapp.controller('mycontroll', function($scope) {
+    console.log($scope);
+    $scope.firstName = "json";
+    $scope.lastName = 'Doe';
+});
+myapp.controller('controller2',function($scope){
+    console.log($scope);
+    $scope.secondName="王八蛋";
+});
+</script>
+
+</html>

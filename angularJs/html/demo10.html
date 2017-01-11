@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<select ng-model="selectedName" ng-options="x.name for x in names">
+</select>
+<span>{{selectedName.url}}</span>
+<br>
+<select ng-model="select1" ng-options="x for (x,y) in sb"></select>
+<span>{{select1}}</span>
+<br>
+<select ng-model="select2" ng-options="x for (x,y) in info"></select>
+<span>name:{{select2.name}}</span>
+<span>age:{{select2.age}}</span>
+<span>grade:{{select2.grade}}</span>
+<span>score:{{select2.score}}</span>
+<br>
+<select ng-model="select">
+    <option ng-repeat="x in names" value="{{x.url}}">{{x.name}}</option>
+</select>
+<span>{{select}}</span>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.names = [{name:'str1',url:"wwww.str1"}, {name:'str2',url:"wwww.str2"}, {name:'str3',url:"wwww.str3"}];
+    $scope.sb={
+        str1:'wwww.str1',
+        str2:'wwww.str2',
+        str3:'wwww.str3'
+    };
+    $scope.info={
+        han:{name:'han',age:18,grade:3,score:80},
+        wang:{name:'wang',age:17,grade:2,score:90},
+        zhang:{name:'zhang',age:18,grade:3,score:90},
+    }
+});
+</script>
+
+<p>该实例演示了 ng-options 指令的使用。</p>
+
+</body>
+</html>

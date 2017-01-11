@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>canvas</title>
+	<style type="text/css">
+		canvas{
+			border:medium double #ddd;
+			/*background: url(../images/head.jpg) no-repeat center;*/
+			background-size:100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="html5_content">
+		<canvas height="200" width="500" id="canvas">
+			你的浏览器不支持canvas元素
+		</canvas>
+	</div>
+</body>
+<script type="text/javascript">
+	(function(){
+		// cancvas 画布
+		var canvas = document.getElementById('canvas'),
+			ctx = canvas.getContext('2d');
+		
+		ctx.fillStyle="red";
+		ctx.font='50px MicroSoft YaHei';
+		ctx.strokeStyle="#000";
+		ctx.miterLimit=50;
+		ctx.globalAlpha=1;
+		
+
+		ctx.fillRect(5,5,30,30);
+
+		ctx.lineWidth=15;
+		ctx.lineJoin='miter'; //  bevel round 默认 :miter
+		ctx.strokeRect(50,20,50,50);
+		ctx.lineJoin='bevel'; //  bevel round 默认 :miter
+		ctx.strokeRect(130,20,50,50);
+		ctx.lineJoin='round'; //  bevel round 默认 :miter
+		ctx.strokeRect(210,20,50,50);
+
+		ctx.arc(60,60,20,20,20);
+		console.log(ctx);
+	})();
+</script>
+</html>

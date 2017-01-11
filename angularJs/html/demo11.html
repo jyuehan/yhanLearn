@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>angular Event</title>
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <input type="button" name="" ng-click="clickMe()" value="点我">
+    <p>{{count}}</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count=0;
+    $scope.clickMe=function(){
+        $scope.count=$scope.count+1;
+        alert('hello word!');
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>自定义angularJS指令</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+        input{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp">
+        <section ng-controller="myControll1">
+            <input type="text" ng-bind="firstName" ng-model="firstName">
+            <input type="text" name="" ng-bind="firstName">
+            <span>{{fullName()}}</span>
+        </section>
+        <section ng-controller="myConttroll2" >
+            <input type="text" ng-bind="secondName" ng-model="secondName">
+        </section>
+    </div>
+</body>
+<script type="text/javascript">
+    var app=angular.module('myApp',[]);
+    var controll1=app.controller('myControll1',function($scope,$rootScope){
+        $scope.firstName="str1";
+        $rootScope.name=$scope.firstName;
+        $scope.fullName=function(){
+            return $scope.firstName;
+        }
+        console.log($rootScope);
+    });
+    console.log(controll1);
+    app.controller('myConttroll2',function($scope,$rootScope){
+        $scope.secondName=$rootScope.name;
+        console.log($rootScope);
+    });
+</script>
+</html>
