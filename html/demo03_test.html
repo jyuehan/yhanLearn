@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>原生js</title>
+	<script type="text/javascript">
+		function jsNative() {
+			// 原生js
+			var jsObj=document.getElementById('div');
+			jsObj.innerHTML='我是一个饼！'
+			jsObj.title='我是一个饼！'
+		}
+	</script>
+	<style>
+		#div{
+			text-align: center;
+			margin: 100px;
+			background-color:#aaa; 
+			height: 100px;
+			width: 100px;
+			zoom: 1;
+			
+		}
+	</style>
+</head>
+<body onload="jsNative()">
+	<div id="div">
+		
+	</div>
+</body>
+</html>
